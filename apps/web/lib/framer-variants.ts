@@ -79,4 +79,4 @@ export const heroTextVariants: Variants = {
       ease: "easeOut",
     },
   },
-}; 
+};

@@ -26,21 +26,21 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
+    <footer className="border-border bg-background border-t">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-accent"></div>
-              <span className="text-xl font-bold text-foreground">
+              <div className="bg-accent h-8 w-8 rounded-lg"></div>
+              <span className="text-foreground text-xl font-bold">
                 Supersapiens
               </span>
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="text-muted-foreground mt-4 text-sm">
               Generative AI Gets the Hype — You Get the Cape.
             </p>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <p className="text-muted-foreground mt-2 text-sm">
               Integriamo la Generative AI nei tuoi workflow: più velocità, più
               wow, più umani al comando.
             </p>
@@ -48,13 +48,13 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Company</h3>
+            <h3 className="text-foreground text-sm font-semibold">Company</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -65,13 +65,13 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Resources</h3>
+            <h3 className="text-foreground text-sm font-semibold">Resources</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -82,7 +82,7 @@ export function Footer() {
 
           {/* Social & Legal */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground">Connect</h3>
+            <h3 className="text-foreground text-sm font-semibold">Connect</h3>
             <ul className="mt-4 space-y-2">
               {footerLinks.social.map((link) => (
                 <li key={link.name}>
@@ -90,7 +90,7 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground text-sm transition-colors"
                   >
                     {link.name}
                   </a>
@@ -100,20 +100,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-border pt-8">
+        <div className="border-border mt-8 border-t pt-8">
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             <div className="flex space-x-6">
               {footerLinks.legal.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground text-xs transition-colors"
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-muted-foreground text-xs">
               © {new Date().getFullYear()} Supersapiens. All rights reserved.
             </p>
           </div>
@@ -121,4 +121,4 @@ export function Footer() {
       </div>
     </footer>
   );
-} 
+}

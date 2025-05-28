@@ -59,7 +59,8 @@ export const Signal = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: "string",
-      resolve: (doc: any) => `/signals/${doc._raw.flattenedPath.replace("signals/", "")}`,
+      resolve: (doc: any) =>
+        `/signals/${doc._raw.flattenedPath.replace("signals/", "")}`,
     },
     slug: {
       type: "string",
@@ -81,4 +82,4 @@ export default makeSource({
     remarkPlugins: [],
     rehypePlugins: [],
   },
-}); 
+});

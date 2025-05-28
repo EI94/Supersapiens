@@ -4,7 +4,7 @@ import "./globals.css";
 import { TopNav } from "@/components/TopNav";
 import { Footer } from "@/components/Footer";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
@@ -14,8 +14,15 @@ export const metadata: Metadata = {
     default: "Supersapiens - Generative AI Gets the Hype — You Get the Cape",
     template: "%s | Supersapiens",
   },
-  description: "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work.",
-  keywords: ["AI", "Generative AI", "AI Integration", "AI Solutions", "Machine Learning"],
+  description:
+    "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work.",
+  keywords: [
+    "AI",
+    "Generative AI",
+    "AI Integration",
+    "AI Solutions",
+    "Machine Learning",
+  ],
   authors: [{ name: "Supersapiens" }],
   creator: "Supersapiens",
   publisher: "Supersapiens",
@@ -25,7 +32,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://supersapiens.it",
     title: "Supersapiens - Generative AI Gets the Hype — You Get the Cape",
-    description: "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work.",
+    description:
+      "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work.",
     siteName: "Supersapiens",
     images: [
       {
@@ -39,7 +47,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Supersapiens - Generative AI Gets the Hype — You Get the Cape",
-    description: "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work.",
+    description:
+      "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work.",
     images: ["/og-image.jpg"],
     creator: "@supersapiens_ai",
   },
@@ -67,25 +76,27 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com/"
+          crossOrigin=""
+        />
         <link
           rel="stylesheet"
           as="style"
           href="https://fonts.googleapis.com/css2?display=swap&family=Inter%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
         />
       </head>
-      <body 
-        className="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+      <body
+        className="group/design-root relative flex size-full min-h-screen flex-col overflow-x-hidden bg-white"
         style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}
       >
         <div className="layout-container flex h-full grow flex-col">
           <TopNav />
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </div>
       </body>
     </html>
   );
-} 
+}

@@ -23,7 +23,7 @@ const challenges = [
 
 export function ChallengeBlock() {
   return (
-    <section className="py-24 bg-background">
+    <section className="bg-background py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={staggerContainer}
@@ -34,16 +34,19 @@ export function ChallengeBlock() {
         >
           <motion.h2
             variants={fadeInUp}
-            className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+            className="text-foreground text-3xl font-bold tracking-tight sm:text-4xl"
           >
             Il Problema È Reale
           </motion.h2>
           <motion.p
             variants={fadeInUp}
-            className="mt-4 text-lg text-muted-foreground"
+            className="text-muted-foreground mt-4 text-lg"
           >
             Le aziende tradizionali stanno perdendo terreno. È tempo del{" "}
-            <span className="text-accent font-semibold">Regenerative Reboot</span>.
+            <span className="text-accent font-semibold">
+              Regenerative Reboot
+            </span>
+            .
           </motion.p>
         </motion.div>
 
@@ -58,7 +61,7 @@ export function ChallengeBlock() {
             <motion.div
               key={index}
               variants={fadeInUp}
-              className="relative rounded-lg border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="border-border bg-card relative rounded-lg border p-6 shadow-sm transition-shadow hover:shadow-md"
             >
               <div className="text-center">
                 <div className="mb-4">
@@ -66,20 +69,23 @@ export function ChallengeBlock() {
                     ❌
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                <h3 className="text-foreground mb-2 text-lg font-semibold">
                   {challenge.problem}
                 </h3>
-                <div className="my-4 border-t border-border"></div>
+                <div className="border-border my-4 border-t"></div>
                 <div className="mb-4">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
+                  <span className="bg-accent/10 text-accent inline-flex h-12 w-12 items-center justify-center rounded-full">
                     ✨
                   </span>
                 </div>
-                <h4 className="text-lg font-semibold text-accent mb-2">
+                <h4 className="text-accent mb-2 text-lg font-semibold">
                   {challenge.solution}
                 </h4>
-                <p className="text-sm text-muted-foreground">
-                  Risultato: <span className="font-semibold text-accent">{challenge.impact}</span>
+                <p className="text-muted-foreground text-sm">
+                  Risultato:{" "}
+                  <span className="text-accent font-semibold">
+                    {challenge.impact}
+                  </span>
                 </p>
               </div>
             </motion.div>
@@ -93,16 +99,17 @@ export function ChallengeBlock() {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="rounded-lg bg-accent/10 border border-accent/20 p-8">
-            <h3 className="text-2xl font-bold text-accent mb-4">
+          <div className="bg-accent/10 border-accent/20 rounded-lg border p-8">
+            <h3 className="text-accent mb-4 text-2xl font-bold">
               Ready for the Regenerative Reboot?
             </h3>
-            <p className="text-lg text-muted-foreground">
-              Non aspettare che i competitor ti superino. Inizia oggi la tua trasformazione AI-First.
+            <p className="text-muted-foreground text-lg">
+              Non aspettare che i competitor ti superino. Inizia oggi la tua
+              trasformazione AI-First.
             </p>
           </div>
         </motion.div>
       </div>
     </section>
   );
-} 
+}

@@ -33,7 +33,7 @@ Crea un file `.env.local` nella directory `apps/web/` con:
 # Resend API Configuration
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxx
 
-# Next.js Configuration  
+# Next.js Configuration
 NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
@@ -61,18 +61,21 @@ Nel dashboard Vercel:
 ## 📋 Funzionalità Implementate
 
 ### Email a Te (pierpaolo.laurito@gmail.com)
+
 - ✅ Notifica immediata di nuovo contatto
 - ✅ Design professionale con branding Supersapiens
 - ✅ Tutti i dettagli del contatto (nome, email, messaggio)
 - ✅ Timestamp del messaggio
 
 ### Email di Conferma all'Utente
+
 - ✅ Conferma automatica di ricezione
 - ✅ Messaggio di benvenuto personalizzato
 - ✅ Link alle risorse del sito
 - ✅ Branding coerente con il sito
 
 ### Validazioni e Sicurezza
+
 - ✅ Validazione email lato client e server
 - ✅ Campi obbligatori
 - ✅ Gestione errori completa
@@ -85,11 +88,13 @@ Le email sono completamente personalizzabili nel file:
 `apps/web/app/api/contact/route.ts`
 
 ### Template Email Notifica
+
 - Header con gradiente brand
 - Sezione dettagli contatto
 - Footer con timestamp
 
 ### Template Email Conferma
+
 - Messaggio di benvenuto personalizzato
 - Call-to-action per esplorare il sito
 - Tagline aziendale
@@ -106,6 +111,7 @@ Il sistema è pronto per il deployment su Vercel:
 ## 📊 Monitoraggio
 
 Resend fornisce:
+
 - Dashboard con statistiche invii
 - Log degli errori
 - Metriche di deliverability
@@ -114,18 +120,22 @@ Resend fornisce:
 ## 🔧 Troubleshooting
 
 ### Email non arrivano
+
 1. Controlla l'API key in `.env.local`
 2. Verifica i log del server (`npm run dev`)
 3. Controlla la dashboard Resend per errori
 4. Verifica che il dominio sia configurato correttamente
 
 ### Errori di validazione
+
 - Controlla che tutti i campi siano compilati
 - Verifica il formato email
 - Controlla la console del browser per errori
 
 ### Rate Limiting
+
 Resend ha limiti gratuiti:
+
 - 100 email/giorno (piano gratuito)
 - 3,000 email/mese (piano gratuito)
 
@@ -134,10 +144,12 @@ Per volumi maggiori, considera l'upgrade al piano a pagamento.
 ## 📞 Supporto
 
 Per problemi con Resend:
+
 - [Documentazione ufficiale](https://resend.com/docs)
 - [Support Resend](https://resend.com/support)
 
 Per problemi con l'implementazione:
+
 - Controlla i log del server
 - Verifica la configurazione delle environment variables
-- Testa l'endpoint API direttamente 
+- Testa l'endpoint API direttamente

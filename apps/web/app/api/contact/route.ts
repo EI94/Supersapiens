@@ -1,5 +1,5 @@
-import { Resend } from 'resend';
-import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from "resend";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
   try {
@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
     // Validazione dei dati
     if (!email || !name || !message) {
       return NextResponse.json(
-        { error: 'Tutti i campi sono obbligatori' },
+        { error: "Tutti i campi sono obbligatori" },
         { status: 400 }
       );
     }
@@ -16,17 +16,14 @@ export async function POST(request: NextRequest) {
     // Validazione email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'Email non valida' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Email non valida" }, { status: 400 });
     }
 
     // Controllo se la chiave API è configurata
     if (!process.env.RESEND_API_KEY) {
-      console.log('RESEND_API_KEY non configurata, simulando invio email');
+      console.log("RESEND_API_KEY non configurata, simulando invio email");
       return NextResponse.json(
-        { message: 'Email inviata con successo! (modalità demo)' },
+        { message: "Email inviata con successo! (modalità demo)" },
         { status: 200 }
       );
     }
@@ -36,8 +33,8 @@ export async function POST(request: NextRequest) {
 
     // Invio email a te
     const { data, error } = await resend.emails.send({
-      from: 'Supersapiens Contact Form <noreply@supersapiens.ai>',
-      to: ['pierpaolo.laurito@gmail.com'],
+      from: "Supersapiens Contact Form <noreply@supersapiens.ai>",
+      to: ["pierpaolo.laurito@gmail.com"],
       subject: `Nuovo contatto da ${name} - Supersapiens`,
       html: `
         <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -63,7 +60,7 @@ export async function POST(request: NextRequest) {
             <div style="margin-bottom: 15px;">
               <strong style="color: #60758a;">Messaggio:</strong>
               <div style="background: white; padding: 15px; border-radius: 6px; margin-top: 8px; border-left: 4px solid #0c7ff2;">
-                ${message.replace(/\n/g, '<br>')}
+                ${message.replace(/\n/g, "<br>")}
               </div>
             </div>
           </div>
@@ -73,7 +70,7 @@ export async function POST(request: NextRequest) {
               Questo messaggio è stato inviato dal form di contatto di Supersapiens
             </p>
             <p style="color: #60758a; margin: 5px 0 0 0; font-size: 12px;">
-              Data: ${new Date().toLocaleString('it-IT')}
+              Data: ${new Date().toLocaleString("it-IT")}
             </p>
           </div>
         </div>
@@ -81,18 +78,18 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error('Errore Resend:', error);
+      console.error("Errore Resend:", error);
       return NextResponse.json(
-        { error: 'Errore nell\'invio dell\'email' },
+        { error: "Errore nell'invio dell'email" },
         { status: 500 }
       );
     }
 
     // Email di conferma all'utente
     await resend.emails.send({
-      from: 'Supersapiens Team <noreply@supersapiens.ai>',
+      from: "Supersapiens Team <noreply@supersapiens.ai>",
       to: [email],
-      subject: 'Grazie per averci contattato - Supersapiens',
+      subject: "Grazie per averci contattato - Supersapiens",
       html: `
         <div style="font-family: Inter, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #0c7ff2 0%, #3d98f4 100%); padding: 30px; border-radius: 12px; margin-bottom: 30px; text-align: center;">
@@ -139,15 +136,14 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json(
-      { message: 'Email inviata con successo!' },
+      { message: "Email inviata con successo!" },
       { status: 200 }
     );
-
   } catch (error) {
-    console.error('Errore API:', error);
+    console.error("Errore API:", error);
     return NextResponse.json(
-      { error: 'Errore interno del server' },
+      { error: "Errore interno del server" },
       { status: 500 }
     );
   }
-} 
+}

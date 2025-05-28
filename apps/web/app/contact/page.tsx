@@ -41,7 +41,9 @@ export default function ContactPage() {
     alert("Grazie per il tuo messaggio! Ti contatteremo presto.");
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -56,39 +58,46 @@ export default function ContactPage() {
           variants={staggerContainer}
           initial="initial"
           animate="animate"
-          className="text-center mb-20"
+          className="mb-20 text-center"
         >
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6"
+            className="text-foreground mb-6 text-4xl font-bold tracking-tight sm:text-5xl"
           >
             Ready for Your Vibe-Call?
           </motion.h1>
           <motion.p
             variants={fadeInUp}
-            className="text-xl text-muted-foreground max-w-3xl mx-auto"
+            className="text-muted-foreground mx-auto max-w-3xl text-xl"
           >
-            Parliamo del tuo <span className="text-accent font-semibold">Regenerative Reboot</span>. 
-            Niente vendite aggressive, solo una conversazione onesta su come l'AI può trasformare la tua azienda.
+            Parliamo del tuo{" "}
+            <span className="text-accent font-semibold">
+              Regenerative Reboot
+            </span>
+            . Niente vendite aggressive, solo una conversazione onesta su come
+            l'AI può trasformare la tua azienda.
           </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Contact Form */}
           <motion.div
             variants={fadeInUp}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="bg-card border border-border rounded-lg p-8 shadow-sm"
+            className="bg-card border-border rounded-lg border p-8 shadow-sm"
           >
-            <h2 className="text-2xl font-bold text-foreground mb-6">
+            <h2 className="text-foreground mb-6 text-2xl font-bold">
               Iniziamo la Conversazione
             </h2>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="name"
+                  className="text-foreground mb-2 block text-sm font-medium"
+                >
                   Nome *
                 </label>
                 <input
@@ -98,13 +107,16 @@ export default function ContactPage() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
+                  className="border-border bg-background text-foreground focus:ring-accent w-full rounded-lg border px-4 py-3 transition-colors focus:border-transparent focus:ring-2"
                   placeholder="Il tuo nome"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="email"
+                  className="text-foreground mb-2 block text-sm font-medium"
+                >
                   Email *
                 </label>
                 <input
@@ -114,13 +126,16 @@ export default function ContactPage() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
+                  className="border-border bg-background text-foreground focus:ring-accent w-full rounded-lg border px-4 py-3 transition-colors focus:border-transparent focus:ring-2"
                   placeholder="la-tua-email@azienda.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="company"
+                  className="text-foreground mb-2 block text-sm font-medium"
+                >
                   Azienda
                 </label>
                 <input
@@ -129,13 +144,16 @@ export default function ContactPage() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-accent focus:border-transparent transition-colors"
+                  className="border-border bg-background text-foreground focus:ring-accent w-full rounded-lg border px-4 py-3 transition-colors focus:border-transparent focus:ring-2"
                   placeholder="La tua azienda"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="message"
+                  className="text-foreground mb-2 block text-sm font-medium"
+                >
                   Messaggio *
                 </label>
                 <textarea
@@ -145,14 +163,14 @@ export default function ContactPage() {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground focus:ring-2 focus:ring-accent focus:border-transparent transition-colors resize-none"
+                  className="border-border bg-background text-foreground focus:ring-accent w-full resize-none rounded-lg border px-4 py-3 transition-colors focus:border-transparent focus:ring-2"
                   placeholder="Raccontaci della tua azienda e delle sfide che stai affrontando..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold hover:bg-accent/90 transition-colors"
+                className="bg-accent text-accent-foreground hover:bg-accent/90 w-full rounded-lg px-8 py-4 font-semibold transition-colors"
               >
                 Invia Messaggio
               </button>
@@ -168,10 +186,10 @@ export default function ContactPage() {
             className="space-y-8"
           >
             <motion.div variants={fadeInUp}>
-              <h2 className="text-2xl font-bold text-foreground mb-6">
+              <h2 className="text-foreground mb-6 text-2xl font-bold">
                 Altri Modi per Contattarci
               </h2>
-              
+
               <div className="space-y-6">
                 {contactInfo.map((info) => (
                   <motion.a
@@ -180,11 +198,11 @@ export default function ContactPage() {
                     href={info.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-4 p-4 rounded-lg border border-border bg-card hover:border-accent/50 transition-colors group"
+                    className="border-border bg-card hover:border-accent/50 group flex items-center space-x-4 rounded-lg border p-4 transition-colors"
                   >
                     <span className="text-2xl">{info.icon}</span>
                     <div>
-                      <h3 className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                      <h3 className="text-foreground group-hover:text-accent font-semibold transition-colors">
                         {info.title}
                       </h3>
                       <p className="text-muted-foreground">{info.value}</p>
@@ -196,37 +214,36 @@ export default function ContactPage() {
 
             <motion.div
               variants={fadeInUp}
-              className="bg-accent/10 border border-accent/20 rounded-lg p-6"
+              className="bg-accent/10 border-accent/20 rounded-lg border p-6"
             >
-              <h3 className="text-lg font-bold text-accent mb-3">
+              <h3 className="text-accent mb-3 text-lg font-bold">
                 Cosa Aspettarti dal Vibe-Call
               </h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="text-muted-foreground space-y-2 text-sm">
                 <li className="flex items-center">
-                  <span className="mr-2 text-accent">✓</span>
+                  <span className="text-accent mr-2">✓</span>
                   Analisi gratuita dei tuoi processi attuali
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2 text-accent">✓</span>
+                  <span className="text-accent mr-2">✓</span>
                   Identificazione delle opportunità AI più impattanti
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2 text-accent">✓</span>
+                  <span className="text-accent mr-2">✓</span>
                   Roadmap personalizzata per il tuo Regenerative Reboot
                 </li>
                 <li className="flex items-center">
-                  <span className="mr-2 text-accent">✓</span>
+                  <span className="text-accent mr-2">✓</span>
                   Nessun impegno, solo valore concreto
                 </li>
               </ul>
             </motion.div>
 
-            <motion.div
-              variants={fadeInUp}
-              className="text-center"
-            >
-              <p className="text-sm text-muted-foreground">
-                Rispondiamo entro <span className="font-semibold text-accent">24 ore</span> a tutti i messaggi.
+            <motion.div variants={fadeInUp} className="text-center">
+              <p className="text-muted-foreground text-sm">
+                Rispondiamo entro{" "}
+                <span className="text-accent font-semibold">24 ore</span> a
+                tutti i messaggi.
               </p>
             </motion.div>
           </motion.div>
@@ -234,4 +251,4 @@ export default function ContactPage() {
       </div>
     </div>
   );
-} 
+}

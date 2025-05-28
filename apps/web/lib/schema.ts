@@ -56,7 +56,8 @@ export function generateOrganizationSchema(): OrganizationSchema {
     name: "Supersapiens",
     url: "https://supersapiens.it",
     logo: "https://supersapiens.it/logo.png",
-    description: "Generative AI Gets the Hype — You Get the Cape. Integriamo la Generative AI nei tuoi workflow.",
+    description:
+      "Generative AI Gets the Hype — You Get the Cape. Integriamo la Generative AI nei tuoi workflow.",
     sameAs: [
       "https://linkedin.com/company/supersapiens",
       "https://twitter.com/supersapiens_ai",
@@ -70,7 +71,9 @@ export function generateOrganizationSchema(): OrganizationSchema {
   };
 }
 
-export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>): FAQSchema {
+export function generateFAQSchema(
+  faqs: Array<{ question: string; answer: string }>
+): FAQSchema {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -113,4 +116,4 @@ export function generateArticleSchema(article: {
     datePublished: article.publishedAt,
     dateModified: article.updatedAt || article.publishedAt,
   };
-} 
+}

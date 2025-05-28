@@ -69,4 +69,4 @@ describe("utils", () => {
       expect(result).toBe("Exactly twenty chars");
     });
   });
-}); 
+});

@@ -21,7 +21,7 @@ export default function HomeHero() {
 
       <motion.p
         role="alert"
-        className="mx-auto mt-6 max-w-xl rounded-md bg-accent-light/20 px-6 py-4 text-lg font-bold text-accent"
+        className="bg-accent-light/20 text-accent mx-auto mt-6 max-w-xl rounded-md px-6 py-4 text-lg font-bold"
         variants={heroTextVariants}
       >
         Se la tua azienda fosse nata oggi sarebbe <strong>AI-First</strong>.
@@ -42,4 +42,4 @@ export default function HomeHero() {
       </motion.div>
     </motion.section>
   );
-} 
+}

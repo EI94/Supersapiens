@@ -35,4 +35,4 @@
     ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
-} 
+}
