@@ -1,8 +1,6 @@
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
   try {
     const { email, name, message } = await request.json();
@@ -23,6 +21,18 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Controllo se la chiave API è configurata
+    if (!process.env.RESEND_API_KEY) {
+      console.log('RESEND_API_KEY non configurata, simulando invio email');
+      return NextResponse.json(
+        { message: 'Email inviata con successo! (modalità demo)' },
+        { status: 200 }
+      );
+    }
+
+    // Inizializza Resend solo se la chiave è disponibile
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Invio email a te
     const { data, error } = await resend.emails.send({

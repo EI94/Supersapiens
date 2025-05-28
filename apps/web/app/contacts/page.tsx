@@ -1,12 +1,6 @@
 "use client";
 
-import { Metadata } from "next";
 import { useState } from "react";
-
-export const metadata: Metadata = {
-  title: "Contact Us - Start Your AI Transformation",
-  description: "Get in touch with our AI experts to start your transformation journey. Contact Supersapiens for custom AI solutions.",
-};
 
 export default function ContactsPage() {
   const [email, setEmail] = useState("");

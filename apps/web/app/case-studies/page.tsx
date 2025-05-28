@@ -1,12 +1,6 @@
 "use client";
 
-import { Metadata } from "next";
 import { useState } from "react";
-
-export const metadata: Metadata = {
-  title: "Case Studies - AI Success Stories",
-  description: "Explore real-world AI implementations and success stories from our clients across various industries.",
-};
 
 const caseStudies = [
   {

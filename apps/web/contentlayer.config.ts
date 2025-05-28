@@ -55,12 +55,6 @@ export const Signal = defineDocumentType(() => ({
       description: "Tags for the signal",
       required: false,
     },
-    published: {
-      type: "boolean",
-      description: "Whether the signal is published",
-      required: false,
-      default: true,
-    },
   },
   computedFields: {
     url: {
@@ -71,12 +65,18 @@ export const Signal = defineDocumentType(() => ({
       type: "string",
       resolve: (doc: any) => doc._raw.flattenedPath.replace("signals/", ""),
     },
+    published: {
+      type: "boolean",
+      resolve: () => true,
+    },
   },
 }));
 
 export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Manifesto, Signal],
+  disableImportAliasWarning: true,
+  onUnknownDocuments: "skip-warn",
   mdx: {
     remarkPlugins: [],
     rehypePlugins: [],

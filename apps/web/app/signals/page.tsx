@@ -1,12 +1,6 @@
 "use client";
 
-import { Metadata } from "next";
 import { useState } from "react";
-
-export const metadata: Metadata = {
-  title: "Signals - AI Insights & Resources",
-  description: "Stay updated with the latest AI trends, insights, and resources. Explore our curated collection of articles on AI in business, ethics, security, and more.",
-};
 
 const featuredArticle = {
   id: 1,
