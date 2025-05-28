@@ -4,15 +4,15 @@
   "private": true,
   "description": "Supersapiens - Generative AI Gets the Hype, You Get the Cape",
   "scripts": {
-    "dev": "pnpm --filter web dev",
-    "build": "pnpm --filter web build",
-    "start": "pnpm --filter web start",
-    "lint": "pnpm --filter web lint",
-    "lint:fix": "pnpm --filter web lint:fix",
-    "type-check": "pnpm --filter web type-check",
-    "test": "pnpm --filter web test",
-    "test:watch": "pnpm --filter web test:watch",
-    "test:coverage": "pnpm --filter web test:coverage",
+    "dev": "cd apps/web && npm run dev",
+    "build": "cd apps/web && npm run build",
+    "start": "cd apps/web && npm run start",
+    "lint": "cd apps/web && npm run lint",
+    "lint:fix": "cd apps/web && npm run lint:fix",
+    "type-check": "cd apps/web && npm run type-check",
+    "test": "cd apps/web && npm run test",
+    "test:watch": "cd apps/web && npm run test:watch",
+    "test:coverage": "cd apps/web && npm run test:coverage",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,mdx}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,mdx}\"",
     "prepare": "husky install"
@@ -25,8 +25,6 @@
     "typescript": "^5.3.0"
   },
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.0.0"
-  },
-  "packageManager": "pnpm@8.15.0"
+    "node": ">=18.0.0"
+  }
 } 
