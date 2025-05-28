@@ -1,0 +1,32 @@
+{
+  "name": "supersapiens-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Supersapiens - Generative AI Gets the Hype, You Get the Cape",
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "start": "pnpm --filter web start",
+    "lint": "pnpm --filter web lint",
+    "lint:fix": "pnpm --filter web lint:fix",
+    "type-check": "pnpm --filter web type-check",
+    "test": "pnpm --filter web test",
+    "test:watch": "pnpm --filter web test:watch",
+    "test:coverage": "pnpm --filter web test:coverage",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,mdx}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,mdx}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0"
+} 
