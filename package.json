@@ -5,7 +5,7 @@
   "description": "Supersapiens - Generative AI Gets the Hype, You Get the Cape",
   "scripts": {
     "dev": "cd apps/web && npm run dev",
-    "build": "cd apps/web && npm run build",
+    "build": "cd apps/web && npm ci && npm run build",
     "start": "cd apps/web && npm run start",
     "lint": "cd apps/web && npm run lint",
     "lint:fix": "cd apps/web && npm run lint:fix",
