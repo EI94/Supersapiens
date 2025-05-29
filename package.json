@@ -9,6 +9,7 @@
     "start": "cd apps/web && npm run start",
     "lint": "cd apps/web && npm run lint",
     "lint:fix": "cd apps/web && npm run lint:fix",
+    "lint-staged": "cd apps/web && npm run lint-staged",
     "type-check": "cd apps/web && npm run type-check",
     "test": "cd apps/web && npm run test",
     "test:watch": "cd apps/web && npm run test:watch",
@@ -26,5 +27,14 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "lint-staged": {
+    "apps/web/**/*.{js,jsx,ts,tsx}": [
+      "cd apps/web && npm run lint:fix",
+      "cd apps/web && prettier --write"
+    ],
+    "**/*.{json,md,mdx}": [
+      "prettier --write"
+    ]
   }
 } 

@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   creator: "Supersapiens",
   publisher: "Supersapiens",
   metadataBase: new URL("https://supersapiens.it"),
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -75,21 +76,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <head>
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com/"
-          crossOrigin=""
-        />
-        <link
-          rel="stylesheet"
-          as="style"
-          href="https://fonts.googleapis.com/css2?display=swap&family=Inter%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-        />
-      </head>
       <body
-        className="group/design-root relative flex size-full min-h-screen flex-col overflow-x-hidden bg-white"
-        style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}
+        className={`${inter.className} group/design-root relative flex size-full min-h-screen flex-col overflow-x-hidden bg-white`}
       >
         <div className="layout-container flex h-full grow flex-col">
           <TopNav />
