@@ -28,6 +28,11 @@ export const metadata: Metadata = {
   publisher: "Supersapiens",
   metadataBase: new URL("https://supersapiens.it"),
   manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
