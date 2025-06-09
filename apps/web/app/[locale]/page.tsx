@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 type Props = {
   params: { locale: string };
@@ -43,7 +43,10 @@ const stats = [
   },
 ];
 
-function HomePage() {
+function HomePage({ params: { locale } }: Props) {
+  // Enable static rendering
+  setRequestLocale(locale);
+
   const t = useTranslations("home");
 
   return (
