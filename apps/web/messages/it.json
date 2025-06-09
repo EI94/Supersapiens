@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "services": "Servizi",
+    "caseStudies": "Casi Studio",
+    "team": "Team",
+    "blog": "Blog",
+    "getStarted": "Inizia Ora"
+  },
+  "home": {
+    "hero": {
+      "title": "L'IA Generativa Prende l'Hype — Tu Prendi il Mantello.",
+      "subtitle": "Siamo un'agenzia di integrazione per l'IA Generativa. Aiutiamo aziende come la tua a costruire e implementare soluzioni AI che funzionano.",
+      "cta": "Inizia Ora"
+    },
+    "services": {
+      "title": "I Nostri Servizi",
+      "tagline": "Le macchine generano. Gli umani amplificano.",
+      "strategy": {
+        "title": "Strategia e Consulenza AI",
+        "description": "Ti aiutiamo a definire la tua visione AI, identificare opportunità e sviluppare una roadmap per il successo."
+      },
+      "development": {
+        "title": "Sviluppo Prodotti AI",
+        "description": "Costruiamo soluzioni AI personalizzate per le tue esigenze specifiche, dalla proof-of-concept al deployment in produzione."
+      },
+      "training": {
+        "title": "Formazione e Abilitazione AI",
+        "description": "Permettiamo al tuo team di sfruttare l'AI efficacemente attraverso formazione pratica e trasferimento di conoscenze."
+      }
+    },
+    "stats": {
+      "solutions": "Soluzioni AI Implementate",
+      "satisfaction": "Soddisfazione Cliente"
+    },
+    "newsletter": {
+      "title": "Resta Aggiornato con Insights AI",
+      "subtitle": "Ricevi le ultime tendenze, consigli e best practices direttamente nella tua inbox.",
+      "placeholder": "Inserisci la tua email",
+      "subscribe": "Iscriviti"
+    }
+  },
+  "footer": {
+    "company": "Azienda",
+    "services": "Servizi",
+    "resources": "Risorse",
+    "contact": "Contatti",
+    "copyright": "© 2024 Supersapiens. Tutti i diritti riservati."
+  },
+  "meta": {
+    "title": "Supersapiens - L'IA Generativa Prende l'Hype — Tu Prendi il Mantello",
+    "description": "Siamo un'agenzia di integrazione per l'IA Generativa. Aiutiamo aziende come la tua a costruire e implementare soluzioni AI che funzionano."
+  }
+}

@@ -3,16 +3,19 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navigation = [
-  { name: "Services", href: "/services" },
-  { name: "Case Studies", href: "/case-studies" },
-  { name: "Team", href: "/crew" },
-  { name: "Blog", href: "/signals" },
-];
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations("nav");
+
+  const navigation = [
+    { name: t("services"), href: "/services" },
+    { name: t("caseStudies"), href: "/case-studies" },
+    { name: t("team"), href: "/crew" },
+    { name: t("blog"), href: "/signals" },
+  ];
 
   return (
     <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
@@ -50,8 +53,13 @@ export function TopNav() {
           ))}
         </div>
 
+        {/* Language Switcher */}
+        <div className="hidden md:flex">
+          <LanguageSwitcher />
+        </div>
+
         <button className="flex h-10 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-[#3d98f4] px-4 text-sm font-bold leading-normal tracking-[0.015em] text-white transition-colors hover:bg-[#3d98f4]/90">
-          <span className="truncate">Get Started</span>
+          <span className="truncate">{t("getStarted")}</span>
         </button>
 
         {/* Mobile menu button */}
@@ -114,6 +122,10 @@ export function TopNav() {
                   {item.name}
                 </Link>
               ))}
+              {/* Language Switcher Mobile */}
+              <div className="py-2">
+                <LanguageSwitcher />
+              </div>
             </div>
           </motion.div>
         )}

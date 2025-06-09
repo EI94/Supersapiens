@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "team": "Team",
+    "blog": "Blog",
+    "getStarted": "Get Started"
+  },
+  "home": {
+    "hero": {
+      "title": "Generative AI Gets the Hype — You Get the Cape.",
+      "subtitle": "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work.",
+      "cta": "Get Started"
+    },
+    "services": {
+      "title": "Our Services",
+      "tagline": "Machines generate. Humans amplify.",
+      "strategy": {
+        "title": "AI Strategy & Consulting",
+        "description": "We help you define your AI vision, identify opportunities, and develop a roadmap for success."
+      },
+      "development": {
+        "title": "AI Product Development",
+        "description": "We build custom AI solutions tailored to your specific needs, from proof-of-concept to production deployment."
+      },
+      "training": {
+        "title": "AI Training & Enablement",
+        "description": "We empower your team to leverage AI effectively through hands-on training and knowledge transfer."
+      }
+    },
+    "stats": {
+      "solutions": "AI Solutions Deployed",
+      "satisfaction": "Client Satisfaction"
+    },
+    "newsletter": {
+      "title": "Stay Ahead with AI Insights",
+      "subtitle": "Get the latest trends, tips, and best practices delivered to your inbox.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "resources": "Resources",
+    "contact": "Contact",
+    "copyright": "© 2024 Supersapiens. All rights reserved."
+  },
+  "meta": {
+    "title": "Supersapiens - Generative AI Gets the Hype — You Get the Cape",
+    "description": "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work."
+  }
+}
