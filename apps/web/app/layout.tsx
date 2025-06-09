@@ -36,21 +36,12 @@ export const metadata: Metadata = {
     description:
       "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work.",
     siteName: "Supersapiens",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Supersapiens - AI Integration Agency",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Supersapiens - Generative AI Gets the Hype — You Get the Cape",
     description:
       "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work.",
-    images: ["/og-image.jpg"],
     creator: "@supersapiens_ai",
   },
   robots: {
