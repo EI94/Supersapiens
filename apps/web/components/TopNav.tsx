@@ -12,7 +12,7 @@ export function TopNav() {
 
   const navigation = [
     { name: t("services"), href: "/services" },
-    { name: t("caseStudies"), href: "/case-studies" },
+    // { name: t("caseStudies"), href: "/case-studies" }, // Temporarily disabled - page coming soon
     { name: t("team"), href: "/crew" },
     { name: t("blog"), href: "/signals" },
   ];
