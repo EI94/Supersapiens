@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fix for @import CSS issues - force rebuild */
+
 @layer base {
   :root {
     --background: 255 255 255; /* white */
