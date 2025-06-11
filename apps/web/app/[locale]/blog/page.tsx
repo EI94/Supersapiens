@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
 type Props = {
@@ -7,11 +6,9 @@ type Props = {
 };
 
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'blog' });
-
   return {
-    title: t('meta.title'),
-    description: t('meta.description'),
+    title: locale === 'it' ? 'Blog - Supersapiens' : 'Blog - Supersapiens',
+    description: locale === 'it' ? 'Articoli e approfondimenti su AI e innovazione' : 'Articles and insights on AI and innovation',
   };
 }
 
@@ -80,8 +77,7 @@ const blogArticles = [
       en: 'Gain a deeper understanding of AI with this technical deep dive into core concepts, including machine learning, neural networks, and natural language processing.',
       it: 'Ottieni una comprensione più profonda dell\'AI con questo approfondimento tecnico sui concetti fondamentali, inclusi machine learning, reti neurali e elaborazione del linguaggio naturale.'
     },
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAwiSBNyJrjIs-LbY1AM4qxJU0xCN5sIf0bWevs0-yUkNJvxg7pcRnUQToNW8fSV827Nxutmx4yNjne_wGsPMyW5aCPui4jljA88nL_ev2CUBn5Hgv1LEMAihRnZ2BwlOP-PgilStZ25Ae5hsOP1zuCPY4gKu7GLaWXCkF8zBTcGzYNILn2OFqVnS4u1RKja4ksq-8Ou8S_vZ7ZzRVVIzkPCV_pSfdTKBS_K5udcWopf4nRkswvled-G2MTgbJ4wEFdQjZNL8Og3ofD'
-    }
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAwiSBNyJrjIs-LbY1AM4qxJU0xrdQ42OWVPdMyb0N-hq49Su6PpbNaMRo2aRkJjVTNsHCH_A_M-eVo5zoHQLzShGDnUSVMtzeI7mUdacaSruwTlTJYKwVvI9Z5pg2RmBMtoHXeApIkBTwiCMboZiBUGSio76_v9JYNsVBNyiwWvUxdS9YXXIyRBbkDzSEbHhcvDmARK5y668bLEPVCDGi-W0YFCurc4AeQDXHLwNnJfascoNdOZzQw8i-8GMxYX30q3Ljz9jBkbP1J'
   },
   {
     id: 6,
@@ -215,4 +211,4 @@ export default function BlogPage({ params: { locale } }: Props) {
       </div>
     </div>
   );
-}
+} 
