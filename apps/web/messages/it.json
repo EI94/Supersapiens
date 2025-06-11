@@ -49,5 +49,27 @@
   "meta": {
     "title": "Supersapiens - L'IA Generativa Prende l'Hype — Tu Prendi il Mantello",
     "description": "Siamo un'agenzia di integrazione per l'IA Generativa. Aiutiamo aziende come la tua a costruire e implementare soluzioni AI che funzionano."
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog - Supersapiens | Insights dalla Frontiera AI",
+      "description": "Tendenze azionabili, approfondimenti e storie di AI fatto bene. Scopri gli ultimi sviluppi nel mondo dell'intelligenza artificiale."
+    },
+    "hero": {
+      "title": "Insights dalla Frontiera AI",
+      "subtitle": "Tendenze azionabili, approfondimenti e storie di AI fatto bene."
+    },
+    "categories": {
+      "strategy": "Strategia",
+      "tech": "Tecnologia",
+      "culture": "Cultura"
+    },
+    "readMore": "Leggi di Più",
+    "search": {
+      "placeholder": "Cerca articoli"
+    },
+    "tags": {
+      "title": "Tag"
+    }
   }
 }

@@ -49,5 +49,27 @@
   "meta": {
     "title": "Supersapiens - Generative AI Gets the Hype — You Get the Cape",
     "description": "We're an integration agency for Generative AI. We help companies like yours build and deploy AI solutions that work."
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog - Supersapiens | Insights from the AI Frontier",
+      "description": "Actionable trends, deep dives, and stories of AI done right. Discover the latest developments in artificial intelligence."
+    },
+    "hero": {
+      "title": "Insights from the AI Frontier",
+      "subtitle": "Actionable trends, deep dives, and stories of AI done right."
+    },
+    "categories": {
+      "strategy": "Strategy",
+      "tech": "Tech",
+      "culture": "Culture"
+    },
+    "readMore": "Read More",
+    "search": {
+      "placeholder": "Search articles"
+    },
+    "tags": {
+      "title": "Tags"
+    }
   }
 }
