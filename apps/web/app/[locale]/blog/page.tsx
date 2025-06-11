@@ -24,7 +24,7 @@ const blogArticles = [
       en: 'This article provides a comprehensive overview of AI strategies for businesses, covering key considerations, best practices, and real-world examples of successful implementations.',
       it: 'Questo articolo fornisce una panoramica completa delle strategie AI per le aziende, coprendo considerazioni chiave, best practices ed esempi reali di implementazioni di successo.'
     },
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBRl1UEYb9hjg7YtltnBkBdjaIDuLM1NMZq1l92TksffdG7FnVbSE2eIqEomFd-2abhNwt1DPHYOxgb-tZZWYR-YpnoCrdbAg2LPhhius8Hkbwzh5jyhYw4tQhuK23EvFb4Vzgpd91hcGSqfh8JWzR662B6PSjc_93FpQ7z_S2rXcsN5LLUVyTdsPDzArqC_HQ6vUAZTQqkMSG78HVtbcyMIFe5Qi5iskPKahLTl8ZGOvOvez3i2Ut0xViZcq_oYXOiLVZIr8Vp6vtR'
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop'
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const blogArticles = [
       en: 'Explore the journey of AI from its theoretical origins to its current practical applications across various industries, highlighting key milestones and breakthroughs.',
       it: "Esplora il viaggio dell'AI dalle sue origini teoriche alle attuali applicazioni pratiche in vari settori, evidenziando tappe fondamentali e scoperte."
     },
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCL_0IjkZvWye4rTeD6IHQ7E80xrdQ42OWVPdMyb0N-hq49Su6PpbNaMRo2aRkJjVTNsHCH_A_M-eVo5zoHQLzShGDnUSVMtzeI7mUdacaSruwTlTJYKwVvI9Z5pg2RmBMtoHXeApIkBTwiCMboZiBUGSio76_v9JYNsVBNyiwWvUxdS9YXXIyRBbkDzSEbHhcvDmARK5y668bLEPVCDGi-W0YFCurc4AeQDXHLwNnJfascoNdOZzQw8i-8GMxYX30q3Ljz9jBkbP1J'
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&h=600&fit=crop'
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const blogArticles = [
       en: 'Discover how to cultivate a collaborative culture that embraces AI, ensuring seamless integration and maximizing the benefits of AI technologies within your organization.',
       it: 'Scopri come coltivare una cultura collaborativa che abbraccia l\'AI, garantendo un\'integrazione senza soluzione di continuità e massimizzando i benefici delle tecnologie AI nella tua organizzazione.'
     },
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAYyw7Nud30qlPHcys2CZY8UI3UerVqbkTc4YqSjFbGMSXW8E3Wgy28LGIvg2e4ZX-zBZpWXekOarVOs5-93uhm0VV0mSu-xfY9e1P5wIBR6L1wLMzy4lTlSJzw-vp0lmihTR4dlDBeTM5p2z0_iyDB9LG_k-4B2MAwees1XXJiXHGeOzKi1t3jv9hHPLPnSaLGubQMC3yxMBuciR0V3VqnSC3qgvyBGDNof6duR_U46cqJDkShcH9urw83RWKdBq0ys4WvvLx_tdIC'
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop'
   },
   {
     id: 4,
@@ -63,8 +63,7 @@ const blogArticles = [
       en: 'This article outlines essential considerations for developing an AI strategy that can adapt to future changes and advancements in technology, ensuring long-term success.',
       it: 'Questo articolo delinea considerazioni essenziali per sviluppare una strategia AI che può adattarsi ai cambiamenti futuri e ai progressi tecnologici, garantendo successo a lungo termine.'
     },
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAAiftC8creRYdClLjwIPPWDyzSBKaA6-2OUn3vUobzdIgia8374ywvAIcF4-5mZSfTvpTlX0D09LzZ1RIVp1BgRscmXnpKa6zkUQZ4eDZ14BDYJMJ1-geoQZeK4mAENGBHTUmcB2lmwCTD326zHM4WIEu5N43SBXfbDkXQf0FifrQh3rdy4TbeJlSDrduITHP1DpsCBovTfXs9X1rwidKi8SO1Gmh4UhNgrtgIG-DToLZPfoXPKes6t57NFKlKZdrpizErXt9ZwJ8g'
-    }
+    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop'
   },
   {
     id: 5,
@@ -77,7 +76,7 @@ const blogArticles = [
       en: 'Gain a deeper understanding of AI with this technical deep dive into core concepts, including machine learning, neural networks, and natural language processing.',
       it: 'Ottieni una comprensione più profonda dell\'AI con questo approfondimento tecnico sui concetti fondamentali, inclusi machine learning, reti neurali e elaborazione del linguaggio naturale.'
     },
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAwiSBNyJrjIs-LbY1AM4qxJU0xrdQ42OWVPdMyb0N-hq49Su6PpbNaMRo2aRkJjVTNsHCH_A_M-eVo5zoHQLzShGDnUSVMtzeI7mUdacaSruwTlTJYKwVvI9Z5pg2RmBMtoHXeApIkBTwiCMboZiBUGSio76_v9JYNsVBNyiwWvUxdS9YXXIyRBbkDzSEbHhcvDmARK5y668bLEPVCDGi-W0YFCurc4AeQDXHLwNnJfascoNdOZzQw8i-8GMxYX30q3Ljz9jBkbP1J'
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop'
   },
   {
     id: 6,
@@ -90,8 +89,7 @@ const blogArticles = [
       en: 'Examine the ethical considerations surrounding AI from a cultural perspective, addressing issues such as bias, privacy, and the impact on society.',
       it: "Esamina le considerazioni etiche che circondano l'AI da una prospettiva culturale, affrontando questioni come bias, privacy e impatto sulla società."
     },
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCCnyWd8KXwCKEoGY5DvU3-zQXCFk1vhg7RKjZPbunF34uIgrAonZJcBv2lanU3BFUn8Jv8-eCC8ZZ6SSpR3iS30oy4hi852baoIH8t9pchpqEFvbwhsBgsZBOzuJzYji6v0fPRFumR8SA6wtxUAGPXcGYrTKxWHSNu4_AO5aykGCq6eDQRWU0FpyK_Y9CpHTMYnOs2UL9XaG63Q5_SE2fT2RBpRw3ays-xTkulZxY_NAy41KkSKXKPAqerhlbXMJR_PEoygxAjeBmH'
-    }
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
   }
 ];
 
