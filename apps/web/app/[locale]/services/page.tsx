@@ -421,4 +421,3 @@ export default function ServicesPage({ params: { locale } }: Props) {
     </div>
   );
 }
-</rewritten_file>
