@@ -27,13 +27,9 @@ export default function ServicesPage({ params: { locale } }: Props) {
   const t = useTranslations("nav");
 
   return (
-    <div
-      className="group/design-root dark relative flex size-full min-h-screen flex-col overflow-x-hidden bg-[#101a23]"
-      style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}
-    >
-      <div className="layout-container flex h-full grow flex-col">
-        {/* Header */}
-        <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#223649] px-10 py-3">
+    <div className="flex min-h-screen flex-col bg-white">
+      <TopNav />
+      <div className="flex flex-1 justify-center px-10 py-8">
           <div className="flex items-center gap-4 text-white">
             <div className="size-4">
               <svg

@@ -1,8 +1,9 @@
 {
   "nav": {
+    "about": "Chi Siamo",
     "services": "Servizi",
     "caseStudies": "Casi Studio",
-    "team": "Team",
+    "manifesto": "Manifesto",
     "blog": "Blog",
     "getStarted": "Inizia Ora"
   },

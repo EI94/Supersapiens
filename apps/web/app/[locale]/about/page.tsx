@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import Image from "next/image";
+import { TopNav } from "@/components/TopNav";
 
 type Props = {
   params: { locale: string };
@@ -27,237 +29,158 @@ export default function AboutPage({ params: { locale } }: Props) {
   const t = useTranslations("nav");
 
   return (
-    <div
-      className="group/design-root dark relative flex size-full min-h-screen flex-col overflow-x-hidden bg-[#101a23]"
-      style={
-        {
-          "--checkbox-tick-svg":
-            "url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(255,255,255)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e')",
-          fontFamily: 'Inter, "Noto Sans", sans-serif',
-        } as React.CSSProperties
-      }
-    >
-      <div className="layout-container flex h-full grow flex-col">
-        {/* Header */}
-        <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#223649] px-10 py-3">
-          <div className="flex items-center gap-4 text-white">
-            <div className="size-4">
-              <svg
-                viewBox="0 0 48 48"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-            <h2 className="text-lg font-bold leading-tight tracking-[-0.015em] text-white">
-              Supersapiens
-            </h2>
+    <div className="flex min-h-screen flex-col bg-white">
+      <TopNav />
+      
+      <div className="flex flex-1 justify-center px-10 py-8">
+        <div className="w-full max-w-7xl">
+          {/* Hero Section */}
+          <div className="mb-16 text-center">
+            <h1 className="mb-6 text-5xl font-black leading-tight tracking-tight text-gray-900">
+              Chi Siamo
+            </h1>
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
+              Siamo il ponte tra l'intelligenza artificiale e il successo della tua azienda. 
+              Con esperienza consolidata e visione innovativa, trasformiamo le potenzialità dell'AI in risultati concreti.
+            </p>
           </div>
-          <div className="flex flex-1 justify-end gap-8">
-            <div className="flex items-center gap-9">
-              <a
-                className="text-sm font-medium leading-normal text-white"
-                href="#"
-              >
-                {locale === "it" ? "Prodotto" : "Product"}
-              </a>
-              <a
-                className="text-sm font-medium leading-normal text-white"
-                href="#"
-              >
-                {locale === "it" ? "Soluzioni" : "Solutions"}
-              </a>
-              <a
-                className="text-sm font-medium leading-normal text-white"
-                href="#"
-              >
-                {locale === "it" ? "Prezzi" : "Pricing"}
-              </a>
-              <a
-                className="text-sm font-medium leading-normal text-white"
-                href="#"
-              >
-                {locale === "it" ? "Risorse" : "Resources"}
-              </a>
-            </div>
-            <button className="flex h-10 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#0c7ff2] px-4 text-sm font-bold leading-normal tracking-[0.015em] text-white">
-              <span className="truncate">
-                {locale === "it" ? "Inizia" : "Get Started"}
-              </span>
-            </button>
-          </div>
-        </header>
 
-        <div className="flex flex-1 justify-center px-40 py-5">
-          <div className="layout-content-container flex max-w-[960px] flex-1 flex-col">
-            {/* Page Title */}
-            <div className="flex flex-wrap justify-between gap-3 p-4">
-              <p className="tracking-light min-w-72 text-[32px] font-bold leading-tight text-white">
-                {locale === "it" ? "Chi Siamo" : "About Supersapiens"}
+          {/* Mission Section */}
+          <div className="mb-16 grid gap-12 md:grid-cols-2">
+            <div>
+              <h2 className="mb-6 text-3xl font-bold text-gray-900">La Nostra Missione</h2>
+              <p className="mb-4 text-gray-600 leading-relaxed">
+                Crediamo che l'intelligenza artificiale non debba sostituire l'ingegno umano, 
+                ma amplificarlo. La nostra missione è guidare le aziende attraverso la 
+                trasformazione digitale, garantendo che ogni implementazione AI sia strategica, 
+                etica e orientata ai risultati.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Non siamo solo consulenti tecnologici: siamo partner strategici che 
+                comprendono le sfide uniche del tuo business e sviluppano soluzioni 
+                su misura per il tuo successo.
               </p>
             </div>
+            <div className="relative h-64 rounded-lg overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp&q=80"
+                alt="Team collaboration"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
 
-            {/* Main Description */}
-            <p className="px-4 pb-3 pt-1 text-base font-normal leading-normal text-white">
-              {locale === "it"
-                ? "Crediamo che l'AI generativa elevi, non sostituisca mai. La nostra missione è creare il livello di astrazione dove gli umani fanno il loro lavoro migliore—più intelligenti, più veloci, più umani."
-                : "We believe generative AI elevates, never replaces. Our mission is to create the abstraction layer where humans do their best work—smarter, faster, more human."}
+          {/* Values Section */}
+          <div className="mb-16">
+            <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">I Nostri Valori</h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="text-center">
+                <div className="mb-4 flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100">
+                    <svg className="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="mb-3 text-xl font-bold text-gray-900">Innovazione</h3>
+                <p className="text-gray-600">
+                  Rimaniamo sempre all'avanguardia delle tecnologie AI per offrirti 
+                  soluzioni che definiscono il futuro del tuo settore.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mb-4 flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
+                    <svg className="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="mb-3 text-xl font-bold text-gray-900">Trasparenza</h3>
+                <p className="text-gray-600">
+                  Crediamo nella comunicazione chiara e onesta. Ogni progetto è 
+                  caratterizzato da totale trasparenza sui processi e sui risultati.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mb-4 flex justify-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
+                    <svg className="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="mb-3 text-xl font-bold text-gray-900">Collaborazione</h3>
+                <p className="text-gray-600">
+                  Il successo nasce dalla partnership. Lavoriamo fianco a fianco 
+                  con i tuoi team per garantire risultati duraturi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Team Section */}
+          <div className="mb-16">
+            <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">Il Nostro Team</h2>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div className="text-center">
+                <div className="mb-4 relative h-48 w-48 mx-auto">
+                  <Image
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=faces&auto=format&fm=webp&q=80"
+                    alt="CEO"
+                    fill
+                    className="rounded-full object-cover"
+                  />
+                </div>
+                <h3 className="mb-2 text-xl font-bold text-gray-900">Marco Alberti</h3>
+                <p className="mb-3 text-blue-600">CEO & Founder</p>
+                <p className="text-sm text-gray-600">
+                  Esperto in strategia AI con oltre 10 anni di esperienza nella trasformazione digitale.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mb-4 relative h-48 w-48 mx-auto">
+                  <Image
+                    src="https://images.unsplash.com/photo-1494790108755-2616c1a25ce0?w=300&h=300&fit=crop&crop=faces&auto=format&fm=webp&q=80"
+                    alt="CTO"
+                    fill
+                    className="rounded-full object-cover"
+                  />
+                </div>
+                <h3 className="mb-2 text-xl font-bold text-gray-900">Sofia Chen</h3>
+                <p className="mb-3 text-blue-600">CTO</p>
+                <p className="text-sm text-gray-600">
+                  Architetto AI con expertise in machine learning e sviluppo di sistemi scalabili.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="mb-4 relative h-48 w-48 mx-auto">
+                  <Image
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=faces&auto=format&fm=webp&q=80"
+                    alt="Lead Developer"
+                    fill
+                    className="rounded-full object-cover"
+                  />
+                </div>
+                <h3 className="mb-2 text-xl font-bold text-gray-900">Alessandro Bianchi</h3>
+                <p className="mb-3 text-blue-600">Lead AI Developer</p>
+                <p className="text-sm text-gray-600">
+                  Specialista in implementazione AI con focus su soluzioni enterprise e integration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="rounded-lg bg-gradient-to-r from-blue-600 to-blue-800 p-8 text-center text-white">
+            <h2 className="mb-4 text-3xl font-bold">Pronto a Trasformare la Tua Azienda?</h2>
+            <p className="mb-6 text-xl">
+              Scopri come l'intelligenza artificiale può rivoluzionare il tuo business.
             </p>
-
-            {/* Our Vision Section */}
-            <h3 className="px-4 pb-2 pt-4 text-lg font-bold leading-tight tracking-[-0.015em] text-white">
-              {locale === "it" ? "La Nostra Visione" : "Our Vision"}
-            </h3>
-            <div className="px-4">
-              <label className="flex flex-row gap-x-3 py-3">
-                <input
-                  type="checkbox"
-                  className="h-5 w-5 rounded border-2 border-[#314d68] bg-transparent text-[#0c7ff2] checked:border-[#0c7ff2] checked:bg-[#0c7ff2] checked:bg-[image:--checkbox-tick-svg] focus:border-[#314d68] focus:outline-none focus:ring-0 focus:ring-offset-0"
-                  defaultChecked
-                />
-                <p className="text-base font-normal leading-normal text-white">
-                  {locale === "it"
-                    ? "Tecnologia come amplificatore, non come stampella."
-                    : "Technology as an amplifier, not a crutch."}
-                </p>
-              </label>
-              <label className="flex flex-row gap-x-3 py-3">
-                <input
-                  type="checkbox"
-                  className="h-5 w-5 rounded border-2 border-[#314d68] bg-transparent text-[#0c7ff2] checked:border-[#0c7ff2] checked:bg-[#0c7ff2] checked:bg-[image:--checkbox-tick-svg] focus:border-[#314d68] focus:outline-none focus:ring-0 focus:ring-offset-0"
-                  defaultChecked
-                />
-                <p className="text-base font-normal leading-normal text-white">
-                  {locale === "it"
-                    ? "AI etica fin dalla progettazione."
-                    : "Ethical AI by design."}
-                </p>
-              </label>
-              <label className="flex flex-row gap-x-3 py-3">
-                <input
-                  type="checkbox"
-                  className="h-5 w-5 rounded border-2 border-[#314d68] bg-transparent text-[#0c7ff2] checked:border-[#0c7ff2] checked:bg-[#0c7ff2] checked:bg-[image:--checkbox-tick-svg] focus:border-[#314d68] focus:outline-none focus:ring-0 focus:ring-offset-0"
-                  defaultChecked
-                />
-                <p className="text-base font-normal leading-normal text-white">
-                  {locale === "it"
-                    ? "Cultura dell'apprendimento continuo."
-                    : "Continuous learning culture."}
-                </p>
-              </label>
-            </div>
-
-            {/* Our Journey Section */}
-            <h3 className="px-4 pb-2 pt-4 text-lg font-bold leading-tight tracking-[-0.015em] text-white">
-              {locale === "it" ? "Il Nostro Percorso" : "Our Journey"}
-            </h3>
-            <div className="grid grid-cols-[40px_1fr] gap-x-2 px-4">
-              {/* Step 1 */}
-              <div className="flex flex-col items-center gap-1 pt-3">
-                <div
-                  className="text-white"
-                  data-icon="CircleNotch"
-                  data-size="24px"
-                  data-weight="regular"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24px"
-                    height="24px"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,61.59,40,93.27,40,128a88,88,0,0,0,176,0c0-34.73-20.15-66.41-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z" />
-                  </svg>
-                </div>
-                <div className="h-2 w-[1.5px] grow bg-[#314d68]"></div>
-              </div>
-              <div className="flex flex-1 flex-col py-3">
-                <p className="text-base font-medium leading-normal text-white">
-                  {locale === "it" ? "Fondata" : "Founded"}
-                </p>
-                <p className="text-base font-normal leading-normal text-[#90adcb]">
-                  2024
-                </p>
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex flex-col items-center gap-1">
-                <div className="h-2 w-[1.5px] bg-[#314d68]"></div>
-                <div
-                  className="text-white"
-                  data-icon="CircleNotch"
-                  data-size="24px"
-                  data-weight="regular"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24px"
-                    height="24px"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,61.59,40,93.27,40,128a88,88,0,0,0,176,0c0-34.73-20.15-66.41-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z" />
-                  </svg>
-                </div>
-                <div className="h-2 w-[1.5px] grow bg-[#314d68]"></div>
-              </div>
-              <div className="flex flex-1 flex-col py-3">
-                <p className="text-base font-medium leading-normal text-white">
-                  {locale === "it" ? "25+ progetti" : "25+ projects"}
-                </p>
-                <p className="text-base font-normal leading-normal text-[#90adcb]">
-                  2025
-                </p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex flex-col items-center gap-1 pb-3">
-                <div className="h-2 w-[1.5px] bg-[#314d68]"></div>
-                <div
-                  className="text-white"
-                  data-icon="CircleNotch"
-                  data-size="24px"
-                  data-weight="regular"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24px"
-                    height="24px"
-                    fill="currentColor"
-                    viewBox="0 0 256 256"
-                  >
-                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-78.36,60.66-95.27a8,8,0,0,1,6.68,14.54C60.15,61.59,40,93.27,40,128a88,88,0,0,0,176,0c0-34.73-20.15-66.41-51.34-80.73a8,8,0,0,1,6.68-14.54C208.19,49.64,232,87,232,128Z" />
-                  </svg>
-                </div>
-              </div>
-              <div className="flex flex-1 flex-col py-3">
-                <p className="text-base font-medium leading-normal text-white">
-                  {locale === "it" ? "Espansione globale" : "Global expansion"}
-                </p>
-                <p className="text-base font-normal leading-normal text-[#90adcb]">
-                  2026
-                </p>
-              </div>
-            </div>
-
-            {/* Call to Action */}
-            <div className="flex justify-start px-4 py-3">
-              <a
-                href={`/${locale}/manifesto`}
-                className="flex h-10 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-[#0c7ff2] px-4 text-sm font-bold leading-normal tracking-[0.015em] text-white"
-              >
-                <span className="truncate">
-                  {locale === "it"
-                    ? "Leggi il Manifesto"
-                    : "Read the Manifesto"}
-                </span>
-              </a>
-            </div>
+            <button className="rounded-lg bg-white px-8 py-3 font-bold text-blue-600 transition-colors hover:bg-gray-100">
+              Contattaci Oggi
+            </button>
           </div>
         </div>
       </div>

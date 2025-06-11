@@ -11,10 +11,11 @@ export function TopNav() {
   const t = useTranslations("nav");
 
   const navigation = [
+    { name: t("about"), href: "/about" },
     { name: t("services"), href: "/services" },
-    // { name: t("caseStudies"), href: "/case-studies" }, // Temporarily disabled - page coming soon
-    { name: t("team"), href: "/crew" },
-    { name: t("blog"), href: "/signals" },
+    { name: t("caseStudies"), href: "/case-studies" },
+    { name: t("manifesto"), href: "/manifesto" },
+    { name: t("blog"), href: "/blog" },
   ];
 
   return (

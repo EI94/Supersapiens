@@ -1,8 +1,9 @@
 {
   "nav": {
+    "about": "About",
     "services": "Services",
     "caseStudies": "Case Studies",
-    "team": "Team",
+    "manifesto": "Manifesto",
     "blog": "Blog",
     "getStarted": "Get Started"
   },
