@@ -22,9 +22,7 @@ export default function BlogPage({ params: { locale } }: Props) {
           <h1 className="mb-8 text-4xl font-bold text-gray-900">
             {t("hero.title")}
           </h1>
-          <p className="mb-8 text-xl text-gray-600">
-            {t("hero.subtitle")}
-          </p>
+          <p className="mb-8 text-xl text-gray-600">{t("hero.subtitle")}</p>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             <article className="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
               <div className="p-6">
@@ -41,4 +39,4 @@ export default function BlogPage({ params: { locale } }: Props) {
       </div>
     </div>
   );
-} 
+}

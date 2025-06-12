@@ -45,7 +45,9 @@ export default function ServicesPage({ params: { locale } }: Props) {
             <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm">
               <div className="mb-6">
                 <h3 className="mb-4 text-2xl font-bold text-gray-900">
-                  {locale === "it" ? "Strategia AI & Consulenza" : "AI Strategy & Consulting"}
+                  {locale === "it"
+                    ? "Strategia AI & Consulenza"
+                    : "AI Strategy & Consulting"}
                 </h3>
                 <p className="text-gray-600">
                   {locale === "it"
@@ -58,7 +60,9 @@ export default function ServicesPage({ params: { locale } }: Props) {
             <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm">
               <div className="mb-6">
                 <h3 className="mb-4 text-2xl font-bold text-gray-900">
-                  {locale === "it" ? "Sviluppo AI Personalizzato" : "Custom AI Development"}
+                  {locale === "it"
+                    ? "Sviluppo AI Personalizzato"
+                    : "Custom AI Development"}
                 </h3>
                 <p className="text-gray-600">
                   {locale === "it"
@@ -71,7 +75,9 @@ export default function ServicesPage({ params: { locale } }: Props) {
             <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-sm">
               <div className="mb-6">
                 <h3 className="mb-4 text-2xl font-bold text-gray-900">
-                  {locale === "it" ? "Formazione AI & Abilitazione" : "AI Training & Enablement"}
+                  {locale === "it"
+                    ? "Formazione AI & Abilitazione"
+                    : "AI Training & Enablement"}
                 </h3>
                 <p className="text-gray-600">
                   {locale === "it"
@@ -99,4 +105,4 @@ export default function ServicesPage({ params: { locale } }: Props) {
       </div>
     </div>
   );
-} 
+}
